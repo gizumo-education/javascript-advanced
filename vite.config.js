@@ -7,15 +7,16 @@ export default (() => {
   const devServerPath = lessonName === 'dom' ? 'lesson/domOperation' : lessonName;
 
   return defineConfig({
-    root: 'src',
     build: {
       rollupOptions: {
         input: {
-          dom: resolve(__dirname, 'src/lesson/domOperation/index.html'),
+          'lesson/domOperation': resolve(__dirname, 'src/lesson/domOperation/index.html'),
           practice: resolve(__dirname, 'src/practice/index.html'),
         },
+        outDir: 'dist/',
         output: {
-          assetFileNames: '[name]/[ext]/[name].[ext]',
+          entryFileNames: 'src/[name]/index.js',
+          assetFileNames: assetInfo => assetInfo.name,
         }
       },
       polyfillModulePreload: false,
@@ -27,7 +28,7 @@ export default (() => {
       }),
     ],
     server: {
-      open: `/${devServerPath}/index.html`,
+      open: `/src/${devServerPath}/index.html`,
       port: 8000,
     },
   });
