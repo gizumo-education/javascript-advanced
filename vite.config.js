@@ -4,13 +4,13 @@ import legacy from '@vitejs/plugin-legacy';
 
 export default (() => {
   const lessonName = process.env.LESSON_NAME;
-  const devServerPath = lessonName === 'dom' ? 'lesson/domOperation' : lessonName;
 
   return defineConfig({
     build: {
       rollupOptions: {
         input: {
           'lesson/domOperation': resolve(__dirname, 'src/lesson/domOperation/index.html'),
+          'lesson/ajax': resolve(__dirname, 'src/lesson/ajax/index.html'),
           practice: resolve(__dirname, 'src/practice/index.html'),
         },
         outDir: 'dist/',
@@ -28,7 +28,7 @@ export default (() => {
       }),
     ],
     server: {
-      open: `/src/${devServerPath}/index.html`,
+      open: `/src/${lessonName}/index.html`,
       port: 8000,
     },
   });
