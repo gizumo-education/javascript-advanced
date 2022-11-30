@@ -16,8 +16,8 @@ h2,
 h3,
 h4,
 p,
-ul[class],
-ol[class],
+ul,
+ol,
 li,
 figure,
 figcaption,
@@ -34,8 +34,8 @@ body {
   line-height: 1.5;
 }
 /* class属性を持つul、ol要素のリストスタイルを削除 */
-ul[class],
-ol[class] {
+ul,
+ol {
   list-style: none;
 }
 /* classを持たない要素はデフォルトのスタイルを取得 */
