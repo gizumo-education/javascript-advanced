@@ -6,6 +6,7 @@
   "scripts": {
     "dev:dom": "cross-env LESSON_NAME=lesson/domOperation vite",
     "dev:ajax": "cross-env LESSON_NAME=lesson/ajax vite",
+    "dev:promise": "cross-env LESSON_NAME=lesson/promise vite",
     "dev:practice": "cross-env LESSON_NAME=practice vite",
     "build": "vite build"
   },

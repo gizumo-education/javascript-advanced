@@ -11,6 +11,7 @@ export default (() => {
         input: {
           'lesson/domOperation': resolve(__dirname, 'src/lesson/domOperation/index.html'),
           'lesson/ajax': resolve(__dirname, 'src/lesson/ajax/index.html'),
+          'lesson/promise': resolve(__dirname, 'src/lesson/promise/index.html'),
           practice: resolve(__dirname, 'src/practice/index.html'),
         },
         outDir: 'dist/',
